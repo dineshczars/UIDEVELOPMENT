@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Insert title here</title>
+	<link rel="stylesheet" href="login-page.css">
+	<!--<script defer src="login-page.js"></script>-->
+	
+<script type="text/javascript">
+	function message()
+	{
+		var name= document.getElementById("username").value;
+		var gender = document.getElementsByName("gender");
+		alert("Hello DInesh "+ name +"  gender= "+ gender[1].value);
+	}
+	
+	function counth2()
+	{
+		var total= document.getElementsByTagName("h2");
+	
+		alert("total h2 Tag =  "+ total.length);
+	}
+	function counth3()
+	{
+		var total= document.getElementsByTagName("h3");
+			var totalp= document.getElementsByTagName("p");
+	
+		alert("total h3 Tag = "+ total.length + "paragraph = "+totalp.length);
+	}
+	
+	function showcommentform(){
+		
+		var data= "comment: this function is for comment add in div"
+		document.getElementById("comment").innerHTML=data;
+	}
+	
+	</script>
+</head>
+
+<body>
+	
+	<main id="main-holder">
+		<h1 id="login-header">Login</h1>
+		
+
+		<div id="login-error-msg-holder">
+			<p id="login-error-msg">Invalid username or password</p>
+		</div>
+		<!--<h2> h2 Tag</h2>
+		<h2>h2 Tag</h2>
+		<h3>h3 Tag</h3>
+		<h3>h3 Tag</h3>
+		<h3>h3 Tag</h3>
+		<p>this is paragraph</p>-->
+
+		<form  name="loginform" value="loginform" id="login-form">
+			<input type="text" name="username" id="username" class="login-form-field" placeholder="Username">
+			male<input type="radio" name="gender"  value="male">
+			female<input type="radio" name="gender"  value="female">
+			
+			<br>
+			<input type="password" name="password" id="password-field" class="login-form-field" placeholder="Password">
+			<!--<input type="button"" value="Submit" maxlength="8" id="login-form-submit">-->
+			<!--<input type="button" value="click" onclick="message()">-->
+			<!--<input type="button" value="click" onclick="counth2()">
+			<input type="button" value="click" onclick="counth3()">-->
+			<input type="button" value="comment" onclick="showcommentform()">
+			<div id="comment"></div>
+		</form>
+
+	</main>
+</body>
+
+</html>
